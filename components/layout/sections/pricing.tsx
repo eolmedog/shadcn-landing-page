@@ -13,11 +13,16 @@ enum PopularPlan {
   NO = 0,
   YES = 1,
 }
+enum MonthlyPlan{
+  NO = 0,
+  YES = 1,
+}
 
 interface PlanProps {
   title: string;
   popular: PopularPlan;
-  price: number;
+  month: Boolean;
+  price: number|string;
   description: string;
   buttonText: string;
   benefitList: string[];
@@ -25,48 +30,51 @@ interface PlanProps {
 
 const plans: PlanProps[] = [
   {
-    title: "Free",
+    title: "Básico",
     popular: 0,
-    price: 0,
+    month: true,
+    price: 1,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Start Free Trial",
+      "Prueba un chatbot simple y descubre el poder de la automatización.",
+    buttonText: "Lo quiero",
     benefitList: [
-      "1 team member",
-      "1 GB storage",
-      "Upto 2 pages",
-      "Community support",
-      "AI assistance",
+      "Chatbot básico para WhatsApp o Instagram",
+      "Respuestas automáticas",
+      "Guía para configuración e integración",
+      "Asistencia por IA",
+      "Modelo básico"
     ],
   },
   {
-    title: "Premium",
+    title: "Consultoría en IA",
     popular: 1,
-    price: 45,
+    month: false,
+    price: 500,
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Get starterd",
+      "Auditoría completa para descubrir cómo la IA puede optimizar tu negocio.",
+    buttonText: "Solicitar Consultoría",
     benefitList: [
-      "4 team member",
-      "8 GB storage",
-      "Upto 6 pages",
-      "Priority support",
-      "AI assistance",
+      "Evaluación de procesos internos de hasta 3 áreas",
+      "Diseño de soluciones con IA y roadmap de implementación",
+      "Identificación de oportunidades de automatización",
+      "Validación de estrategias y ajuste del plan según necesidades",
+      "Informe detallado con plan de acción",
+      "Descuento del 100% si desarrollas con nosotros",
     ],
   },
   {
-    title: "Enterprise",
+    title: "IA y Automatización a Medida",
     popular: 0,
-    price: 120,
+    month: false,
+    price: "Contáctanos",
     description:
-      "Lorem ipsum dolor sit, amet ipsum consectetur adipisicing elit.",
-    buttonText: "Contact US",
+      "Desarrollo de soluciones de IA personalizadas que transforman tu negocio.",
+    buttonText: "Agendar Reunión",
     benefitList: [
-      "10 team member",
-      "20 GB storage",
-      "Upto 10 pages",
-      "Phone & email support",
-      "AI assistance",
+      "Desarrollo de agentes de IA, aplicaciones y automatización a la medida",
+      "Integraciones con todos tus sistemas",
+      "Soporte y mantenimiento continuo",
+      "Automatización de procesos internos y externos"
     ],
   },
 ];
@@ -75,20 +83,20 @@ export const PricingSection = () => {
   return (
     <section className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Pricing
+        Nuestros Planes
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        Get unlimitted access
+        Planes de IA y Automatización para Cada Necesidad
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground pb-14">
-        Lorem ipsum dolor sit amet consectetur adipisicing reiciendis.
+        Desde pruebas básicas hasta soluciones empresariales avanzadas, elige el plan que mejor se adapte a tu negocio.
       </h3>
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
         {plans.map(
-          ({ title, popular, price, description, buttonText, benefitList }) => (
+          ({ title, popular, month, price, description, buttonText, benefitList }) => (
             <Card
               key={title}
               className={
@@ -105,8 +113,8 @@ export const PricingSection = () => {
                 </CardDescription>
 
                 <div>
-                  <span className="text-3xl font-bold">${price}</span>
-                  <span className="text-muted-foreground"> /month</span>
+                  <span className="text-3xl font-bold">{price}</span>
+                  {month && <span className="text-muted-foreground"> /mes</span>}
                 </div>
               </CardHeader>
 

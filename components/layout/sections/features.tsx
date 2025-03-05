@@ -10,41 +10,35 @@ interface FeaturesProps {
 
 const featureList: FeaturesProps[] = [
   {
-    icon: "TabletSmartphone",
-    title: "Mobile Friendly",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, consectetur.",
+    icon: "Lightbulb",
+    title: "Tecnología que Entiende tu Negocio",
+    description: "No aplicamos IA por aplicarla. Analizamos tus necesidades y desarrollamos soluciones que realmente optimizan tus procesos."
   },
   {
-    icon: "BadgeCheck",
-    title: "Social Proof",
-    description:
-      "Lorem ipsum dolor sit amet consectetur. Natus consectetur, odio ea accusamus aperiam.",
+    icon: "Brain",
+    title: "Más que Chatbots, Inteligencia Accionable",
+    description: "Creamos agentes de IA que no solo responden, sino que ejecutan tareas, procesan datos y toman decisiones."
   },
   {
-    icon: "Goal",
-    title: "Targeted Content",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. odio ea accusamus aperiam.",
+    icon: "PlugZap",
+    title: "Automatización sin Fricción y Simple",
+    description: "Nos aseguramos de que la integración con tus herramientas actuales sea fluida y sin interrupciones."
   },
   {
-    icon: "PictureInPicture",
-    title: "Strong Visuals",
-    description:
-      "Lorem elit. A odio velit cum aliquam. Natus consectetur dolores, odio ea accusamus aperiam.",
+    icon: "TrendingUp",
+    title: "Personalización Real",
+    description: "Cada solución es adaptada a las necesidades de tu empresa, sin configuraciones genéricas o limitadas."
   },
   {
-    icon: "MousePointerClick",
-    title: "Clear CTA",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing. odio ea accusamus consectetur.",
+    icon: "TrendingUp",
+    title: "Éxito a Largo Plazo",
+    description: "No solo te vendemos una solución, te acompañamos con soporte, mejoras y evolución constante."
   },
   {
-    icon: "Newspaper",
-    title: "Clear Headline",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur.",
-  },
+    icon: "Smile",
+    title: "Compromiso con la Simplicidad",
+    description: "Hacemos que la IA sea accesible, sin tecnicismos innecesarios. Cualquiera puede usarla y beneficiarse de ella."
+  }
 ];
 
 export const FeaturesSection = () => {
@@ -55,13 +49,11 @@ export const FeaturesSection = () => {
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-        What Makes Us Different
+        Nuestra Diferencia: IA con Propósito y Resultados
       </h2>
 
       <h3 className="md:w-1/2 mx-auto text-xl text-center text-muted-foreground mb-8">
-        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatem
-        fugiat, odit similique quasi sint reiciendis quidem iure veritatis optio
-        facere tenetur.
+        No solo creamos tecnología, desarrollamos soluciones inteligentes que realmente generan impacto en tu negocio.
       </h3>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -78,7 +70,7 @@ export const FeaturesSection = () => {
                   />
                 </div>
 
-                <CardTitle>{title}</CardTitle>
+                <CardTitle className="text-center">{title}</CardTitle>
               </CardHeader>
 
               <CardContent className="text-muted-foreground text-center">

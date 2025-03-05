@@ -48,7 +48,7 @@ export default function Home() {
       <FeaturesSection />
       <ServicesSection />
       <TestimonialSection />
-      <TeamSection />
+      {/* //<TeamSection /> */}
       <CommunitySection />
       <PricingSection />
       <ContactSection />

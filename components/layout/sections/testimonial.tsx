@@ -26,54 +26,54 @@ interface ReviewProps {
 
 const reviewList: ReviewProps[] = [
   {
-    image: "https://github.com/shadcn.png",
-    name: "John Doe",
-    userName: "Product Manager",
+    image: "/testimonials/claudio.webp",
+    name: "Claudio Pérez",
+    userName: "Jefe de Análisis en Lecaros y Asociados",
     comment:
-      "Wow NextJs + Shadcn is awesome!. This template lets me change colors, fonts and images to match my brand identity. ",
+      "Es una eficiencia enorme la que ganamos con ustedes. Pasar de dos días de trabajo a full con el mejor ejecutivo a 15 minutos con el robot funcionando y todo quedara listo, es de verdad impresionante.",
     rating: 5.0,
   },
   {
-    image: "https://github.com/shadcn.png",
-    name: "Sophia Collins",
-    userName: "Cybersecurity Analyst",
+    image: "/testimonials/sebastian_pasten.jpeg",
+    name: "Sebastian Pasten",
+    userName: "Gerente TI en Centro Médico Vilanco",
     comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna. ",
-    rating: 4.8,
+      "Gracias al desarrollo que implementamos con ustedes, optimizamos nuestra operación, reduciendo un equipo de 7 a 2 personas sin perder eficiencia. Además, la automatización disminuyó significativamente los no-shows.",
+    rating: 5.0,
   },
 
   {
-    image: "https://github.com/shadcn.png",
-    name: "Adam Johnson",
-    userName: "Chief Technology Officer",
+    image: "/testimonials/andoni2.jpeg",
+    name: "Andoni Echave",
+    userName: "Gerente General en Medestuk",
     comment:
-      "Lorem ipsum dolor sit amet,exercitation. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    rating: 4.9,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ethan Parker",
-    userName: "Data Scientist",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+      "Me gusta trabajar con ustedes porque no solo desarrollan, sino que preguntan siempre el porqué, entienden el objetivo de negocio y proponen soluciones alineadas con lo que necesitamos.",
     rating: 5.0,
   },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Ava Mitchell",
-    userName: "IT Project Manager",
-    comment:
-      "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
-    rating: 5.0,
-  },
-  {
-    image: "https://github.com/shadcn.png",
-    name: "Isabella Reed",
-    userName: "DevOps Engineer",
-    comment:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    rating: 4.9,
-  },
+  // {
+  //   image: "https://github.com/shadcn.png",
+  //   name: "Ethan Parker",
+  //   userName: "Data Scientist",
+  //   comment:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod labore et dolore magna aliqua. Ut enim ad minim veniam.",
+  //   rating: 5.0,
+  // },
+  // {
+  //   image: "https://github.com/shadcn.png",
+  //   name: "Ava Mitchell",
+  //   userName: "IT Project Manager",
+  //   comment:
+  //     "Lorem ipsum dolor sit amet, tempor incididunt  aliqua. Ut enim ad minim veniam, quis nostrud incididunt consectetur adipiscing elit.",
+  //   rating: 5.0,
+  // },
+  // {
+  //   image: "https://github.com/shadcn.png",
+  //   name: "Isabella Reed",
+  //   userName: "DevOps Engineer",
+  //   comment:
+  //     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  //   rating: 4.9,
+  // },
 ];
 
 export const TestimonialSection = () => {
@@ -81,11 +81,11 @@ export const TestimonialSection = () => {
     <section id="testimonials" className="container py-24 sm:py-32">
       <div className="text-center mb-8">
         <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-          Testimonials
+          Testimonios
         </h2>
 
         <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
-          Hear What Our 1000+ Clients Say
+          Qué Dicen Nuestros Clientes
         </h2>
       </div>
 
@@ -117,7 +117,7 @@ export const TestimonialSection = () => {
                   <div className="flex flex-row items-center gap-4">
                     <Avatar>
                       <AvatarImage
-                        src="https://avatars.githubusercontent.com/u/75042455?v=4"
+                        src={review.image}
                         alt="radix"
                       />
                       <AvatarFallback>SV</AvatarFallback>
