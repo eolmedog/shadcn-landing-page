@@ -10,29 +10,39 @@ interface BenefitsProps {
 
 const benefitList: BenefitsProps[] = [
   {
-    icon: "Blocks",
-    title: "Build Brand Trust",
+    icon: "Workflow",
+    title: "Automatiza Flujos de Trabajo Internos",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Los agentes de IA gestionan tareas administrativas, procesamiento de documentos, aprobaciones y actualización de sistemas, liberando a tu equipo del trabajo repetitivo.",
   },
   {
-    icon: "LineChart",
-    title: "More Leads",
+    icon: "MessagesSquare",
+    title: "Impulsa Ventas y Servicio al Cliente 24/7",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam, natus consectetur.",
+      "Atiende clientes de manera instantánea en WhatsApp, Instagram o tu sitio web. Responde preguntas, capta leads y cierra ventas con o sin intervención humana.",
   },
   {
-    icon: "Wallet",
-    title: "Higher Conversions",
+    icon: "BrainCircuit",
+    title: "Toman Decisiones Como un Humano",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus consectetur. A odio velit cum aliquam",
+      "Analizan datos, detectan patrones y ejecutan acciones inteligentes, ya sea para asignar tareas, priorizar solicitudes o recomendar próximos pasos.",
   },
   {
-    icon: "Sparkle",
-    title: "Test Marketing Ideas",
+    icon: "Network",
+    title: "Se Integran Perfectamente con Tu Negocio",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. A odio velit cum aliquam. Natus consectetur dolores.",
+      "Conéctalos a tu CRM, ERP, software interno y canales de comunicación para lograr una automatización total de tus operaciones.",
   },
+  {
+    icon: "HandHelping",
+    title: "Te Acompañamos en Todo el Proceso",
+    description: "No necesitas ser un experto en IA o tecnología. Desde la planificación hasta la implementación, te guiamos y hacemos recomendaciones en cada paso para que aproveches al máximo la automatización sin complicaciones."
+  },
+  {
+    icon: "Code",
+    title: "Tecnología y Soluciones a Medida",
+    description: "Desarrollamos Automatizaciones personalizadas, plataformas web y herramientas que optimizan cualquier aspecto de tu negocio. Si tienes un proceso manual, podemos digitalizarlo y hacerlo más eficiente con tecnología a medida."
+  }
 ];
 
 export const BenefitsSection = () => {
@@ -40,16 +50,14 @@ export const BenefitsSection = () => {
     <section id="benefits" className="container py-24 sm:py-32">
       <div className="grid lg:grid-cols-2 place-items-center lg:gap-24">
         <div>
-          <h2 className="text-lg text-primary mb-2 tracking-wider">Benefits</h2>
+          <h2 className="text-lg text-primary mb-2 tracking-wider">Beneficios</h2>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Your Shortcut to Success
+            Agentes de IA Que Trabajan Como Tu Mejor Colaborador
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non
-            ducimus reprehenderit architecto rerum similique facere odit
-            deleniti necessitatibus quo quae.
-          </p>
+            Desde la automatización de procesos internos hasta la gestión de interacciones con clientes, los agentes de IA piensan, analizan y actúan para mantener tu negocio en marcha de manera eficiente.</p>
+
         </div>
 
         <div className="grid lg:grid-cols-2 gap-4 w-full">
