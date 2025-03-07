@@ -27,6 +27,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
+import FixedLinkButton from "@/components/ui/fixed-link-button";
 
 const formSchema = z.object({
   firstName: z.string().min(2).max(255),
@@ -240,6 +241,7 @@ export const ContactSection = () => {
           <CardFooter></CardFooter>
         </Card>
       </section>
+      
     </section>
   );
 };

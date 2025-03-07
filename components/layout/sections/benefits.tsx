@@ -1,6 +1,8 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import FixedLinkButton from "@/components/ui/fixed-link-button";
 
 interface BenefitsProps {
   icon: string;
@@ -57,6 +59,11 @@ export const BenefitsSection = () => {
           </h2>
           <p className="text-xl text-muted-foreground mb-8">
             Desde la automatización de procesos internos hasta la gestión de interacciones con clientes, los agentes de IA piensan, analizan y actúan para mantener tu negocio en marcha de manera eficiente.</p>
+            <div className="flex justify-center">
+              <FixedLinkButton className="w-5/6 md:w-1/4 font-bold group/arrow">
+                Agendar Ahora
+              </FixedLinkButton>
+            </div>
 
         </div>
 

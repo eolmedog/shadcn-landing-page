@@ -7,8 +7,8 @@ import { ThemeProvider } from "@/components/layout/theme-provider";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Shadcn - Landing template",
-  description: "Landing template from Shadcn",
+  title: "Automatiza Lo Fome",
+  description: "Trainfo - Automatiza Lo Fome",
 };
 
 export default function RootLayout({
@@ -25,7 +25,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
+          
 
           {children}
         </ThemeProvider>

@@ -8,7 +8,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import Image from "next/image";
-
+import FixedLinkButton from "@/components/ui/fixed-link-button";
 export const CommunitySection = () => {
   return (
     <section id="community" className="py-12 ">
@@ -32,11 +32,11 @@ export const CommunitySection = () => {
             </CardContent>
 
             <CardFooter>
-              <Button asChild>
-                <a href="https://discord.com/" target="_blank">
+              <FixedLinkButton asChild>
+                
                   Agendar Ahora
-                </a>
-              </Button>
+                
+              </FixedLinkButton>
             </CardFooter>
           </Card>
         </div>

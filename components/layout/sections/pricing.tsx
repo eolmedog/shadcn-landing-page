@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import FixedLinkButton from "@/components/ui/fixed-link-button";
 import {
   Card,
   CardContent,
@@ -33,7 +34,7 @@ const plans: PlanProps[] = [
     title: "Básico",
     popular: 0,
     month: true,
-    price: 1,
+    price: "USD 1 / CLP $1.000",
     description:
       "Prueba un chatbot simple y descubre el poder de la automatización.",
     buttonText: "Lo quiero",
@@ -42,14 +43,15 @@ const plans: PlanProps[] = [
       "Respuestas automáticas",
       "Guía para configuración e integración",
       "Asistencia por IA",
-      "Modelo básico"
+      "Modelo básico",
+      "Hasta 100 conversaciones por mes",
     ],
   },
   {
     title: "Consultoría en IA",
     popular: 1,
     month: false,
-    price: 500,
+    price: "USD 500 / CLP $400.000",
     description:
       "Auditoría completa para descubrir cómo la IA puede optimizar tu negocio.",
     buttonText: "Solicitar Consultoría",
@@ -81,7 +83,7 @@ const plans: PlanProps[] = [
 
 export const PricingSection = () => {
   return (
-    <section className="container py-24 sm:py-32">
+    <section id="pricing" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
         Nuestros Planes
       </h2>
@@ -115,6 +117,7 @@ export const PricingSection = () => {
                 <div>
                   <span className="text-3xl font-bold">{price}</span>
                   {month && <span className="text-muted-foreground"> /mes</span>}
+                  {popular=== PopularPlan?.YES && <span className="text-muted-foreground"> <br />+ IVA</span>}
                 </div>
               </CardHeader>
 
@@ -130,14 +133,15 @@ export const PricingSection = () => {
               </CardContent>
 
               <CardFooter>
-                <Button
+                <FixedLinkButton
                   variant={
                     popular === PopularPlan?.YES ? "default" : "secondary"
                   }
                   className="w-full"
                 >
+                  
                   {buttonText}
-                </Button>
+                </FixedLinkButton>
               </CardFooter>
             </Card>
           )

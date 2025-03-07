@@ -1,12 +1,13 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Icon } from "@/components/ui/icon";
 import { icons } from "lucide-react";
-
+import { Button } from "@/components/ui/button";
 interface FeaturesProps {
   icon: string;
   title: string;
   description: string;
 }
+import FixedLinkButton from "@/components/ui/fixed-link-button";
 
 const featureList: FeaturesProps[] = [
   {
@@ -45,7 +46,7 @@ export const FeaturesSection = () => {
   return (
     <section id="features" className="container py-24 sm:py-32">
       <h2 className="text-lg text-primary text-center mb-2 tracking-wider">
-        Features
+        Nuestro Valor
       </h2>
 
       <h2 className="text-3xl md:text-4xl text-center font-bold mb-4">
@@ -79,7 +80,13 @@ export const FeaturesSection = () => {
             </Card>
           </div>
         ))}
+
       </div>
+      <div className="flex justify-center mt-5">
+              <FixedLinkButton className="w-5/6 md:w-1/4 font-bold group/arrow">
+                Agendar Ahora
+              </FixedLinkButton>
+        </div>
     </section>
   );
 };
