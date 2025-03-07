@@ -18,7 +18,7 @@ import {
 } from "lucide-react"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import Image from "next/image"
-
+import { TestimonialSection } from "@/components/layout/sections/testimonial"
 
 export default function LandingPage() {
   return (
@@ -242,7 +242,7 @@ export default function LandingPage() {
         </section>
 
         {/* Testimonials */}
-        <section className="container py-24 sm:py-32">
+        {/* <section className="container py-24 sm:py-32">
           <h2 className="text-3xl font-bold text-center mb-12">Lo Que Dicen Nuestros Clientes</h2>
 
           <div className="grid md:grid-cols-3 gap-8">
@@ -303,7 +303,8 @@ export default function LandingPage() {
               </p>
             </Card>
           </div>
-        </section>
+        </section> */}
+        <TestimonialSection />
 
         {/* Pricing Section */}
         <section id="pricing" className="bg-muted/50 py-24 sm:py-32">
