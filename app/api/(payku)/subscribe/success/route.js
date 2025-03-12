@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import { sign } from "../../utils";
 import { supabase } from "../../../../lib/supabaseClient";
+import bcrypt from "bcrypt";
+import nodemailer from "nodemailer";
 
 const BASE_URL = process.env.PAYKU_BASE_URL;
 const token_publico = process.env.PAYKU_TOKEN_PUBLICO;
@@ -31,6 +33,62 @@ const get_sub_client = async (client_email) => {
   console.log(result);
 };
 
+const generateUsername = (name) => {
+  const nameParts = name.split(" ");
+  if (nameParts.length < 2) {
+    return nameParts[0].charAt(0).toLowerCase() + nameParts[0].toLowerCase(); // Use the full name if only one name part is available
+  }
+  const firstNameInitial = nameParts[0].charAt(0).toLowerCase();
+  const lastName = nameParts[nameParts.length - 1].toLowerCase();
+  return firstNameInitial + lastName;
+};
+
+const generatePassword = (username) => {
+  const randomNumber = Math.floor(1000 + Math.random() * 9000); // Generate a random 4-digit number
+  return username + randomNumber;
+};
+
+const hashPassword = async (password) => {
+  const saltRounds = 10;
+  return await bcrypt.hash(password, saltRounds);
+};
+
+const sendEmail = async (email, username, password) => {
+  const transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 465,
+    secure: true,
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: process.env.EMAIL_USER,
+    to: email,
+    subject: "Bienvenido a Automatiza Lo Fome!",
+    html: `
+      <div style="font-family: Arial, sans-serif; padding: 20px;">
+        <h2 style="color: #333;">Bienvenido a Automatiza Lo Fome!</h2>
+        <p>Hola ${username},</p>
+        <p>Tu cuenta ha sido creada exitosamente. Aquí están tus credenciales:</p>
+        <p><strong>Username:</strong> ${username}</p>
+        <p><strong>Password:</strong> ${password}</p>
+        <p>Por favor, cambia tu contraseña después de iniciar sesión.</p>
+        <a href="https://app.automatizalofome.cl/login" style="background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block;">Ir a la página de inicio de sesión</a>
+      </div>
+    `,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    console.log("Email sent successfully");
+  } catch (error) {
+    console.error("Error sending email:", error);
+  }
+};
+
 const checkUserExists = async (email) => {
   const { data, error } = await supabase
     .from("Users")
@@ -49,12 +107,18 @@ const checkUserExists = async (email) => {
 };
 
 const createUser = async (userData) => {
-  const { email, name, company } = userData;
+  const { email, name } = userData;
+
+  const username = generateUsername(name);
+  const password = generatePassword(username);
+  const hashedPassword = await hashPassword(password);
 
   const { data, error } = await supabase.from("Users").insert([
     {
       email: email,
       name: name,
+      username: username,
+      password: hashedPassword,
       plan: "basic",
       mustChangePassword: true,
     },
@@ -64,6 +128,9 @@ const createUser = async (userData) => {
     console.error("Error creating user:", error);
     return false;
   }
+
+  // Send email with username and password
+  await sendEmail(email, username, password);
 
   return true;
 };
