@@ -49,7 +49,7 @@ const checkUserExists = async (email) => {
 };
 
 const createUser = async (userData) => {
-  const { email, name } = userData;
+  const { email, name, company } = userData;
 
   const { data, error } = await supabase.from("Users").insert([
     {
@@ -125,6 +125,7 @@ export async function POST(req) {
   } else {
     console.log("Transaction failed or details not available.");
   }
+  
 }
 
 export async function GET(req) {
