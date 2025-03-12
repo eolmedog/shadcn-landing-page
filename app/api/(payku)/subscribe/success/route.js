@@ -1,5 +1,7 @@
-import {NextResponse} from "next/server";
-import {sign} from "../../utils";
+import { NextResponse } from "next/server";
+import { sign } from "../../utils";
+import { supabase } from "../../../../lib/supabaseClient";
+
 const BASE_URL = process.env.PAYKU_BASE_URL;
 const token_publico = process.env.PAYKU_TOKEN_PUBLICO;
 
@@ -26,25 +28,76 @@ const get_sub_client = async (client_email) => {
     },
   });
   const result = await response.json();
-  console.log(result)
-}
+  console.log(result);
+};
 
-request(data);
+const checkUserExists = async (email) => {
+  const { data, error } = await supabase
+    .from("Users")
+    .select("*")
+    .eq("email", email);
 
+  if (error) {
+    console.error("Error checking user existence:", error);
+    return false;
+  }
+
+  return data.length > 0;
+};
+
+const createUser = async (userData) => {
+  const { email, name } = userData;
+
+  const { data, error } = await supabase.from("Users").insert([
+    {
+      email: email,
+      name: name,
+      plan: "basic",
+      mustChangePassword: true,
+    },
+  ]);
+
+  if (error) {
+    console.error("Error creating user:", error);
+    return false;
+  }
+
+  return true;
+};
 
 export async function POST(req) {
-    console.log('POST request received')
-    const transaction_data = await req.json();
-    const transaction_id = transaction_data.wetransaction_id
-    const details = await get_transaction(transaction_id);
+  console.log("POST request received");
+  const transaction_data = await req.json();
+  const transaction_id = transaction_data.wetransaction_id;
+  const details = await get_transaction(transaction_id);
 
-    if (details && details.status === 'success') {
-        const client_email = details.email;
-        const sub_client_data = await get_sub_client(client_email);
-        console.log(sub_client_data);
+  if (details && details.status === "success") {
+    const client_email = details.email;
+    const sub_client_data = await get_sub_client(client_email);
+
+    if (sub_client_data) {
+      const userExists = await checkUserExists(client_email);
+
+      if (!userExists) {
+        const created = await createUser({
+          email: client_email,
+          name: sub_client_data.name,
+        });
+
+        if (created) {
+          console.log("User created successfully in Supabase.");
+        } else {
+          console.log("Failed to create user in Supabase.");
+        }
+      } else {
+        console.log("User already exists in Supabase.");
+      }
     } else {
-        console.log("Transaction failed or details not available.");
+      console.log("sub_client_data is null or undefined");
     }
+  } else {
+    console.log("Transaction failed or details not available.");
+  }
 }
 
 export async function GET(req) {
