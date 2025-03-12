@@ -42,7 +42,10 @@ const checkUserExists = async (email) => {
     return false;
   }
 
-  return data.length > 0;
+  if (data.length > 0) {
+    return data[0]; // Return the user data if it exists
+  }
+  return null;
 };
 
 const createUser = async (userData) => {
@@ -65,6 +68,20 @@ const createUser = async (userData) => {
   return true;
 };
 
+const updateUserPlan = async (userId) => {
+  const { data, error } = await supabase
+    .from("Users")
+    .update({ plan: "basic" })
+    .eq("id", userId);
+
+  if (error) {
+    console.error("Error updating user plan:", error);
+    return false;
+  }
+
+  return true;
+};
+
 export async function POST(req) {
   console.log("POST request received");
   const transaction_data = await req.json();
@@ -76,9 +93,9 @@ export async function POST(req) {
     const sub_client_data = await get_sub_client(client_email);
 
     if (sub_client_data) {
-      const userExists = await checkUserExists(client_email);
+      const existingUser = await checkUserExists(client_email);
 
-      if (!userExists) {
+      if (!existingUser) {
         const created = await createUser({
           email: client_email,
           name: sub_client_data.name,
@@ -91,6 +108,16 @@ export async function POST(req) {
         }
       } else {
         console.log("User already exists in Supabase.");
+        if (existingUser.plan === "free" || existingUser.plan === null) {
+          const updated = await updateUserPlan(existingUser.id);
+          if (updated) {
+            console.log("User plan updated to 'basic'.");
+          } else {
+            console.log("Failed to update user plan.");
+          }
+        } else {
+          console.log("User plan is not 'free' or null, no update needed.");
+        }
       }
     } else {
       console.log("sub_client_data is null or undefined");
