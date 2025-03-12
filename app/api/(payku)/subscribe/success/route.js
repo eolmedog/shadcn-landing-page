@@ -37,7 +37,14 @@ export async function POST(req) {
     const transaction_data = await req.json();
     const transaction_id = transaction_data.wetransaction_id
     const details = await get_transaction(transaction_id);
-    console.log(details)
+
+    if (details && details.status === 'success') {
+        const client_email = details.email;
+        const sub_client_data = await get_sub_client(client_email);
+        console.log(sub_client_data);
+    } else {
+        console.log("Transaction failed or details not available.");
+    }
 }
 
 export async function GET(req) {
