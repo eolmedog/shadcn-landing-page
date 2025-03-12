@@ -27,6 +27,8 @@ interface PlanProps {
   description: string;
   buttonText: string;
   benefitList: string[];
+  fixed: Boolean;
+  href?: string;
 }
 
 const plans: PlanProps[] = [
@@ -46,6 +48,8 @@ const plans: PlanProps[] = [
       "Modelo básico",
       "Hasta 100 conversaciones por mes",
     ],
+    fixed: false,
+    href: "https://sandbox.flow.cl/btn.php?token=a2fbc16c25f32e2e1180acba405702c096c5a8f3"
   },
   {
     title: "Consultoría en IA",
@@ -63,6 +67,7 @@ const plans: PlanProps[] = [
       "Informe detallado con plan de acción",
       "Descuento del 100% si desarrollas con nosotros",
     ],
+    fixed: true
   },
   {
     title: "IA y Automatización a Medida",
@@ -78,6 +83,7 @@ const plans: PlanProps[] = [
       "Soporte y mantenimiento continuo",
       "Automatización de procesos internos y externos"
     ],
+    fixed: true
   },
 ];
 
@@ -98,7 +104,7 @@ export const PricingSection = () => {
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-4">
         {plans.map(
-          ({ title, popular, month, price, description, buttonText, benefitList }) => (
+          ({ title, popular, month, price, description, buttonText, benefitList , fixed, href}) => (
             <Card
               key={title}
               className={
@@ -133,15 +139,28 @@ export const PricingSection = () => {
               </CardContent>
 
               <CardFooter>
-                <FixedLinkButton
+                { fixed && <FixedLinkButton
                   variant={
                     popular === PopularPlan?.YES ? "default" : "secondary"
                   }
                   className="w-full"
                 >
+              
                   
                   {buttonText}
-                </FixedLinkButton>
+                </FixedLinkButton>}
+                {!fixed && <Button 
+                  variant={
+                  popular === PopularPlan?.YES ? "default" : "secondary"
+                  }
+                  className="w-full"
+                >
+                  <a href={href}>
+                    {buttonText}
+                  </a>
+                </Button>
+                }
+                
               </CardFooter>
             </Card>
           )

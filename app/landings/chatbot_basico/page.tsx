@@ -134,7 +134,7 @@ export default function LandingPage() {
         {/* Features Section */}
         <section id="features" className="container py-24 sm:py-32">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">Características Principales</h2>
+            <h2 className="text-4xl font-bold">Características Principales</h2>
             <p className="text-muted-foreground mt-4 max-w-md mx-auto">
               Nuestro chatbot de 1 USD incluye todo lo que necesitas para empezar a automatizar tu atención al cliente.
             </p>
@@ -176,7 +176,7 @@ export default function LandingPage() {
         {/* How It Works */}
         <section id="how-it-works" className="bg-muted/50 py-24 sm:py-32">
           <div className="container">
-            <h2 className="text-3xl font-bold text-center mb-12">Cómo Funciona</h2>
+            <h2 className="text-4xl font-bold text-center mb-12">Cómo Funciona</h2>
 
             <div className="grid md:grid-cols-4 gap-8">
               <div className="bg-background rounded-lg p-6 relative">
@@ -336,6 +336,10 @@ export default function LandingPage() {
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
                     <span>Integración con WhatsApp</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <CheckCircle className="h-5 w-5 text-primary" />
+                    <span>Integración con Instagram</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <CheckCircle className="h-5 w-5 text-primary" />
