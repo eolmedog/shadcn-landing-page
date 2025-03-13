@@ -8,7 +8,7 @@ interface FixedLinkButtonProps {
 }
 
 const FixedLinkButton: React.FC<FixedLinkButtonProps> = ({ children, className }) => {
-  const fixedUrl = "https://www.google.cl";
+  const fixedUrl = "https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ1DoaNF6jGiZt9clyLQrqRc3vuveJLs2-bPuXM5fU-vvSME0nV2gGwNRHpq5OE-GdBRMnuXju3H";
 
   return (
     <Button asChild className={className}>

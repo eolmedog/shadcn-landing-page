@@ -1,19 +1,20 @@
 import { NextResponse } from "next/server";
-import { sign } from "../utils"; // Assuming this function is in utils.js
+import { sign } from "./utils"; // Assuming this function is in utils.js
 import logger from "@/lib/logger"; // Import Winston logger
 
 const base_url = process.env.PAYKU_BASE_URL;
 const token_publico = process.env.PAYKU_TOKEN_PUBLICO;
 
-export async function POST(req) {
+export default async function create_client(client_data) {
+    
     try {
-        const data = await req.json();
-        logger.info("Received POST request", { data });
+        logger.info("Received client data", client_data );
 
         async function request(data) {
             try {
                 const requestPath = base_url + "/api/suclient";
-                const signature = await sign(requestPath, data);
+                const slug = '/api/suclient'
+                const signature = await sign(slug, data);
 
                 logger.debug("Generated signature for request", { signature });
 
@@ -28,7 +29,7 @@ export async function POST(req) {
                 });
 
                 if (!response.ok) {
-                    throw new Error(`Request failed with status: ${response.status}`);
+                    throw new Error(`Request failed with status: ${response.status}: ${response.statusText}`);
                 }
 
                 const result = await response.json();
@@ -41,8 +42,9 @@ export async function POST(req) {
             }
         }
 
-        const resp = await request(data);
-        return NextResponse.json(resp);
+        const resp = await request(client_data);
+
+        return resp;
     } catch (error) {
         logger.error("Error in POST handler", { error: error.message });
         return NextResponse.json(

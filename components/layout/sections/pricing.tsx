@@ -39,7 +39,7 @@ const plans: PlanProps[] = [
     price: "USD 1 / CLP $1.000",
     description:
       "Prueba un chatbot simple y descubre el poder de la automatización.",
-    buttonText: "Lo quiero",
+    buttonText: "Pronto...",
     benefitList: [
       "Chatbot básico para WhatsApp o Instagram",
       "Respuestas automáticas",
@@ -49,13 +49,13 @@ const plans: PlanProps[] = [
       "Hasta 100 conversaciones por mes",
     ],
     fixed: false,
-    href: "https://sandbox.flow.cl/btn.php?token=a2fbc16c25f32e2e1180acba405702c096c5a8f3"
+    href: "https://des.payku.cl/suscripcion/index?idplan=1149&verif=71685902"
   },
   {
     title: "Consultoría en IA",
     popular: 1,
     month: false,
-    price: "USD 500 / CLP $400.000",
+    price: "CLP $400.000",
     description:
       "Auditoría completa para descubrir cómo la IA puede optimizar tu negocio.",
     buttonText: "Solicitar Consultoría",
@@ -149,16 +149,18 @@ export const PricingSection = () => {
                   
                   {buttonText}
                 </FixedLinkButton>}
-                {!fixed && <Button 
+                {!fixed && 
+                // <a className='w-full' href={href}>
+                  <Button disabled title="This button is disabled"
                   variant={
                   popular === PopularPlan?.YES ? "default" : "secondary"
                   }
-                  className="w-full"
+                  className="w-full cursor-not-allowed"
                 >
-                  <a href={href}>
+                  
                     {buttonText}
-                  </a>
                 </Button>
+                  // </a>
                 }
                 
               </CardFooter>

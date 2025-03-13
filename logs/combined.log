@@ -15,3 +15,129 @@
 [2025-03-12 00:36:58]:[INFO] - Received subscription request
 [2025-03-12 00:36:59]:[INFO] - Received response from subscription API
 [2025-03-12 00:36:59]:[INFO] - Subscription registered, redirecting user
+[2025-03-12 10:03:53]:[INFO] - Received subscription request
+[2025-03-12 10:04:40]:[INFO] - Received subscription request
+[2025-03-12 10:07:03]:[ERROR] - Error in subscription endpoint
+[2025-03-12 10:07:17]:[INFO] - Received client data
+[2025-03-12 10:07:17]:[ERROR] - Error in POST handler
+[2025-03-12 10:07:17]:[ERROR] - Error in subscription endpoint
+[2025-03-12 10:07:32]:[INFO] - Received client data
+[2025-03-12 10:07:32]:[ERROR] - Error in POST handler
+[2025-03-12 10:07:32]:[ERROR] - Error in subscription endpoint
+[2025-03-12 10:08:23]:[INFO] - Received client data
+[2025-03-12 10:08:23]:[ERROR] - Error in POST handler
+[2025-03-12 10:08:23]:[ERROR] - Error in subscription endpoint
+[2025-03-12 10:08:44]:[INFO] - Received client data
+[2025-03-12 10:08:44]:[ERROR] - Error in POST handler
+[2025-03-12 10:09:15]:[INFO] - Received client data
+[2025-03-12 10:09:15]:[ERROR] - Error in POST handler
+[2025-03-12 10:09:43]:[INFO] - Received client data
+[2025-03-12 10:09:43]:[ERROR] - Error in POST handler
+[2025-03-12 10:11:42]:[INFO] - Hello World
+[2025-03-12 10:11:42]:[DEBUG] - Debugging mode enabled
+[2025-03-12 10:11:42]:[ERROR] - Something went wrong! {"error":{}}
+[2025-03-12 10:11:42]:[INFO] - User logged in {"userId":123,"username":"Alice"}
+[2025-03-12 10:11:42]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:11:42]:[ERROR] - Error in POST handler {"error":"data is not defined"}
+[2025-03-12 10:13:14]:[INFO] - Hello World
+[2025-03-12 10:13:14]:[DEBUG] - Debugging mode enabled
+[2025-03-12 10:13:14]:[ERROR] - Something went wrong! {"error":{}}
+[2025-03-12 10:13:14]:[INFO] - User logged in {"userId":123,"username":"Alice"}
+[2025-03-12 10:13:14]:[ERROR] - Error in subscription endpoint {"0":"s","1":"u","2":"b","3":"s","4":"c","5":"r","6":"i","7":"p","8":"t","9":"i","10":"o","11":"n","12":"_","13":"d","14":"a","15":"t","16":"a","17":" ","18":"i","19":"s","20":" ","21":"n","22":"o","23":"t","24":" ","25":"d","26":"e","27":"f","28":"i","29":"n","30":"e","31":"d"}
+[2025-03-12 10:13:25]:[INFO] - Hello World
+[2025-03-12 10:13:25]:[DEBUG] - Debugging mode enabled
+[2025-03-12 10:13:25]:[ERROR] - Something went wrong! {"error":{}}
+[2025-03-12 10:13:25]:[INFO] - User logged in {"userId":123,"username":"Alice"}
+[2025-03-12 10:13:25]:[INFO] - Received subscription request
+[2025-03-12 10:13:25]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:13:25]:[DEBUG] - Generated signature for request {"signature":"3c72ac3cd064932ddcf70357543b1c9e886a0547d34e66075c375030cb905c2b"}
+[2025-03-12 10:13:26]:[ERROR] - Error in request function {"error":"Request failed with status: 401"}
+[2025-03-12 10:13:26]:[ERROR] - Error in POST handler {"error":"Failed to send request to external API."}
+[2025-03-12 10:15:36]:[INFO] - Hello World
+[2025-03-12 10:15:36]:[DEBUG] - Debugging mode enabled
+[2025-03-12 10:15:36]:[ERROR] - Something went wrong! {"error":{}}
+[2025-03-12 10:15:36]:[INFO] - User logged in {"userId":123,"username":"Alice"}
+[2025-03-12 10:15:36]:[INFO] - Received subscription request
+[2025-03-12 10:15:36]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:15:36]:[DEBUG] - Generated signature for request {"signature":"3c72ac3cd064932ddcf70357543b1c9e886a0547d34e66075c375030cb905c2b"}
+[2025-03-12 10:15:36]:[ERROR] - Error in request function {"error":"Request failed with status: 401"}
+[2025-03-12 10:15:36]:[ERROR] - Error in POST handler {"error":"Failed to send request to external API."}
+[2025-03-12 10:15:54]:[INFO] - Hello World
+[2025-03-12 10:15:54]:[DEBUG] - Debugging mode enabled
+[2025-03-12 10:15:54]:[ERROR] - Something went wrong! {"error":{}}
+[2025-03-12 10:15:54]:[INFO] - User logged in {"userId":123,"username":"Alice"}
+[2025-03-12 10:15:54]:[INFO] - Received subscription request
+[2025-03-12 10:15:54]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:15:54]:[DEBUG] - Generated signature for request {"signature":"3c72ac3cd064932ddcf70357543b1c9e886a0547d34e66075c375030cb905c2b"}
+[2025-03-12 10:15:55]:[ERROR] - Error in request function {"error":"Request failed with status: 401: Unauthorized"}
+[2025-03-12 10:15:55]:[ERROR] - Error in POST handler {"error":"Failed to send request to external API."}
+[2025-03-12 10:16:48]:[INFO] - Received subscription request
+[2025-03-12 10:16:55]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:18:12]:[DEBUG] - Generated signature for request {"signature":"3c72ac3cd064932ddcf70357543b1c9e886a0547d34e66075c375030cb905c2b"}
+[2025-03-12 10:18:13]:[ERROR] - Error in request function {"error":"Request failed with status: 401: Unauthorized"}
+[2025-03-12 10:18:13]:[ERROR] - Error in POST handler {"error":"Failed to send request to external API."}
+[2025-03-12 10:18:16]:[INFO] - Received subscription request
+[2025-03-12 10:18:16]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:18:16]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:18:27]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:18:16","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:19:16]:[INFO] - Received subscription request
+[2025-03-12 10:19:16]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:19:33]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:19:35]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:19:33","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:19:37]:[INFO] - Received subscription request
+[2025-03-12 10:19:37]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:19:37]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:19:38]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:19:37","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:20:48]:[INFO] - Received subscription request
+[2025-03-12 10:20:48]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:20:50]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:20:51]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:20:50","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:23:25]:[INFO] - Received subscription request
+[2025-03-12 10:23:25]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:23:25]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:23:27]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:23:25","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:23:48]:[INFO] - Received subscription request
+[2025-03-12 10:23:48]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:23:51]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:23:52]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:23:51","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:23:59]:[INFO] - Received subscription request
+[2025-03-12 10:23:59]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:24:01]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:24:03]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:24:01","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:25:24]:[INFO] - Received subscription request
+[2025-03-12 10:25:24]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:25:24]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:25:26]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:25:24","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:26:49]:[INFO] - Received subscription request
+[2025-03-12 10:26:49]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","rut":"111111111","phone":"923122312","address":"Moneda 101","country":"Chile","region":"Metropolitana","city":"Santiago","postal_code":"850000"}
+[2025-03-12 10:26:49]:[DEBUG] - Generated signature for request {"signature":"571908405c64371072326796646b9ff9b6412a94faf793f6197a6222b2fd4bf0"}
+[2025-03-12 10:26:51]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:26:49","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:28:02]:[ERROR] - Error in subscription endpoint {"0":"E","1":"x","2":"p","3":"e","4":"c","5":"t","6":"e","7":"d","8":" ","9":"d","10":"o","11":"u","12":"b","13":"l","14":"e","15":"-","16":"q","17":"u","18":"o","19":"t","20":"e","21":"d","22":" ","23":"p","24":"r","25":"o","26":"p","27":"e","28":"r","29":"t","30":"y","31":" ","32":"n","33":"a","34":"m","35":"e","36":" ","37":"i","38":"n","39":" ","40":"J","41":"S","42":"O","43":"N","44":" ","45":"a","46":"t","47":" ","48":"p","49":"o","50":"s","51":"i","52":"t","53":"i","54":"o","55":"n","56":" ","57":"1","58":"5","59":"9","60":" ","61":"(","62":"l","63":"i","64":"n","65":"e","66":" ","67":"8","68":" ","69":"c","70":"o","71":"l","72":"u","73":"m","74":"n","75":" ","76":"5","77":")"}
+[2025-03-12 10:28:16]:[INFO] - Received subscription request
+[2025-03-12 10:28:16]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","phone":"923122312"}
+[2025-03-12 10:28:20]:[DEBUG] - Generated signature for request {"signature":"a382c464711f391c69b0e5f669120adfe0023e2cba921c65356276cf1bcfe3ec"}
+[2025-03-12 10:28:22]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:28:21","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:34:16]:[INFO] - Received subscription request
+[2025-03-12 10:34:16]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","phone":"923122312"}
+[2025-03-12 10:34:16]:[DEBUG] - Generated signature for request {"signature":"a382c464711f391c69b0e5f669120adfe0023e2cba921c65356276cf1bcfe3ec"}
+[2025-03-12 10:34:18]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:34:17","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:34:18]:[INFO] - Received response from subscription API {"result":{"type":"Unauthorized","message_error":"error:wrong sign 1"}}
+[2025-03-12 10:34:18]:[ERROR] - Subscription failed {"error":{"type":"Unauthorized","message_error":"error:wrong sign 1"}}
+[2025-03-12 10:35:01]:[INFO] - Received subscription request
+[2025-03-12 10:35:01]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","phone":"923122312"}
+[2025-03-12 10:35:01]:[DEBUG] - Generated signature for request {"signature":"a382c464711f391c69b0e5f669120adfe0023e2cba921c65356276cf1bcfe3ec"}
+[2025-03-12 10:35:03]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:35:01","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:35:38]:[INFO] - Received response from subscription API {"result":{"type":"Unauthorized","message_error":"error:wrong sign 1"}}
+[2025-03-12 10:35:38]:[ERROR] - Subscription failed {"error":{"type":"Unauthorized","message_error":"error:wrong sign 1"}}
+[2025-03-12 10:35:43]:[INFO] - Received subscription request
+[2025-03-12 10:35:43]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","phone":"923122312"}
+[2025-03-12 10:35:43]:[DEBUG] - Generated signature for request {"signature":"a382c464711f391c69b0e5f669120adfe0023e2cba921c65356276cf1bcfe3ec"}
+[2025-03-12 10:35:45]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:35:44","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:36:04]:[INFO] - Received response from subscription API {"result":{"type":"Unauthorized","message_error":"error:wrong sign 1"}}
+[2025-03-12 10:36:04]:[ERROR] - Subscription failed {"error":{"type":"Unauthorized","message_error":"error:wrong sign 1"}}
+[2025-03-12 10:36:44]:[INFO] - Received subscription request {"0":"p","1":"l","2":"4","3":"7","4":"b","5":"d","6":"9","7":"9","8":"c","9":"f","10":"0","11":"6","12":"1","13":"5","14":"d","15":"1","16":"f","17":"2","18":"a","19":"d","20":"a","21":"5"}
+[2025-03-12 10:36:44]:[INFO] - Received client data {"email":"johndoe@example.com","name":"John Doe","phone":"923122312"}
+[2025-03-12 10:36:44]:[DEBUG] - Generated signature for request {"signature":"a382c464711f391c69b0e5f669120adfe0023e2cba921c65356276cf1bcfe3ec"}
+[2025-03-12 10:36:46]:[INFO] - Successful response from external API {"result":{"status":"active","id":"cledca4769447655a34667","rut":"111111111","name":"John Doe","first_name":null,"last_name":null,"phone":"923122312","email":"johndoe@example.com","address":"Moneda 101","city":"Santiago","region":"Metropolitana","country":"Chile","postal_code":"850000","created_at":"2025-03-11 23:32:25","updated_at":"2025-03-12 10:36:45","additional_parameters":null,"subscriptions":[{"id":"su0f5e3f28cd52988c8d70","created_at":"2025-03-12 00:36:59","status":"register","amount":"1000","plan":{"id":"pl47bd99cf0615d1f2ada5","name":"ChatbotBasico","currency":"CLP"},"cards":{"last_4_digits":null,"card_type":null},"active_cards":[],"transactions":[],"logs":{"status":[]}}]}}
+[2025-03-12 10:36:50]:[INFO] - Received response from subscription API {"result":{"status":"register","id":"su0f5e3f28cd52988c8d70","url":"https://des.payku.cl/gateway/registrosuscripcion?tipoplan=1&plan=true&token=5116&validacion=c6bb6f91d2"}}
+[2025-03-12 10:36:50]:[INFO] - Subscription registered, redirecting user {"redirectUrl":"https://des.payku.cl/gateway/registrosuscripcion?tipoplan=1&plan=true&token=5116&validacion=c6bb6f91d2"}
